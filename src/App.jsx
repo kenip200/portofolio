@@ -1,30 +1,43 @@
+import Dataimg from "./data.js";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quasi
-        et reiciendis quaerat saepe dolores corrupti accusantium impedit
-        delectus ad beatae veniam ullam molestiae nemo quisquam sapiente
-        blanditiis, corporis aliquid, facilis quas laborum deleniti alias quod!
-        Esse eaque, dolores quis incidunt, sequi ducimus quia possimus error
-        iure impedit in quasi, ab aperiam adipisci dolore. Facilis blanditiis
-        impedit facere, laboriosam assumenda animi similique eaque, ad quo ea
-        incidunt minus delectus nesciunt eos ullam, ex non sint quam pariatur
-        deserunt officiis? Porro dolorum error, veritatis sit fugit sed, omnis
-        ratione libero similique quibusdam voluptate magnam voluptatum doloribus
-        consequatur quas officiis minus, ex voluptas quo quasi assumenda dolore
-        distinctio. Sunt suscipit a, iusto, voluptas architecto rem ratione
-        aperiam autem porro placeat, optio quis maxime repudiandae provident
-        animi officia in? Numquam architecto possimus dicta a laudantium
-        distinctio porro voluptatum? Dolorum corrupti unde vero distinctio
-        cumque minima quis, ex repellendus mollitia vitae temporibus aliquam
-        deserunt consequatur sunt quam, illum debitis, obcaecati saepe suscipit.
-        Nemo necessitatibus, labore culpa molestias, dolor alias maxime dolore
-        ea perspiciatis sit eaque placeat enim eum beatae cupiditate. Voluptas
-        cum aliquid magnam modi dignissimos. Dignissimos laboriosam repudiandae
-        sapiente cumque porro praesentium itaque, ducimus debitis tempora
-        molestias sint fugiat expedita obcaecati eos! Quaerat.
-      </h1>
+      <div className="hero grid md:grid-cols-2 grid-cols-1 items-center pt-10 xl:gap-0 gap-6">
+        <div>
+          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl self-start">
+            <q>Kode yang indah, lahir dari ketekunan</q>
+          </div>
+          <h1 className="text-5xl/tight font-bold mb-6">
+            Hi, I'm Hanif Fikri Saputra
+          </h1>
+          <q className="text-base/loose mb-6 opacity-50">
+            Software Engineering student from SMKN 1 Jenangan Ponorogo,
+            interested in website and Android application development. Has been
+            learning in this field for the past two years.
+          </q>
+          <div className="flex items-center sm:gap-4 gap-2">
+            <a
+              href="#"
+              className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600"
+            >
+              Download CV <i className="ri-file-download-line ri-lg"></i>
+            </a>
+            <a
+              href="#"
+              className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
+            >
+              see Project <i className="ri-arrow-down-double-fill rii-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <img
+          src={Dataimg.HeroImage}
+          alt="Hero Image"
+          className="w-[500px] md:ml-auto"
+        />
+      </div>
     </>
   );
 }
