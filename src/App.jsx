@@ -1,5 +1,5 @@
 import Dataimg from "./data.js";
-import { listTools } from "./data.js";
+import { listTools, listProyek } from "./data.js";
 
 function App() {
   return (
@@ -38,6 +38,7 @@ function App() {
           src={Dataimg.HeroImage}
           alt="Hero Image"
           className="w-[500px] md:ml-auto"
+          loading="lazy"
         />
       </div>
 
@@ -48,6 +49,7 @@ function App() {
             src={Dataimg.HeroImage}
             alt="About Image"
             className="w-12 rounded-md mb-10 sm:hidden"
+            loading="lazy"
           />
           <p className="text-base/loose mb-10">
             Hi, my name is Hanif Fikri Saputra, a student of Software
@@ -58,6 +60,7 @@ function App() {
               src={Dataimg.HeroImage}
               alt="About Image"
               className="w-12 rounded-md sm:block hidden"
+              loading="lazy"
             />
             <div className="flex items-center gap-6">
               <div>
@@ -81,6 +84,7 @@ function App() {
                 <img
                   src={tool.gambar}
                   alt="Tools Image"
+                  loading="lazy"
                   className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"
                 />
                 <div>
@@ -90,6 +94,45 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* projects */}
+      <div className="projects mt-32 py-10">
+        <h1 className="text-center text-4xl font-bold mb-2">My Projects</h1>
+        <div className="ProjectsBox mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map((proyek) => (
+            <div key={proyek.id} className="p-4 border bg-zinc-800 rounded-md">
+              <img
+                src={proyek.gambar}
+                alt="proyek image"
+                loading="lazy"
+                className="w-full h-auto rounded-md"
+              />
+              <div>
+                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+                <p className="text-base/loose mb-4">{proyek.desk}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {proyek.tools.map((tool, index) => (
+                    <p
+                      key={index}
+                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                    >
+                      {tool}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-8 text-center">
+                  <a
+                    href="#"
+                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-500 hover:bg-violet-600"
+                  >
+                    see website
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
