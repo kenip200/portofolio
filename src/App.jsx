@@ -125,7 +125,7 @@ function App() {
                 <div className="mt-8 text-center">
                   <a
                     href="#"
-                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-500 hover:bg-violet-600"
+                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600"
                   >
                     see website
                   </a>
@@ -134,6 +134,62 @@ function App() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/*  contact */}
+      <div className="contact mt-32" p-10>
+        <h1 className="text-center text-4xl font-bold mb-2">Contact</h1>
+        <form
+          action="https://formsubmit.co/71d31b6a79f1ad98cfb8a89f9d3209d7"
+          method="POST"
+          className="bg-zinc-800 p-10 w-fit mx-auto rounded-md"
+          autoComplete="off"
+        >
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <label className="font-semibold">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                className="border border-zinc-500 rounded-md p-2"
+                required
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label className="font-semibold">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="border border-zinc-500 rounded-md p-2"
+                required
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="message" className="font-semibold">
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                cols="45"
+                rows="7"
+                placeholder="message"
+                className="border border-zinc-500 rounded-md p-2"
+                required
+              ></textarea>
+            </div>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-violet-600"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </>
   );
