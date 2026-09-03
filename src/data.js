@@ -1,4 +1,4 @@
-import HeroImage from "/assets/hero-img2.png";
+const HeroImage = import.meta.env.BASE_URL + "/assets/hero-img2.png".slice(1);
 
 const Image = {
   HeroImage,
@@ -6,16 +6,16 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/Laravel.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/PHP.png";
-import Tools8 from "/assets/tools/MySQL.png";
-import Tools9 from "/assets/tools/Laragon.png";
-import Tools10 from "/assets/tools/github.png";
+const Tools1 = import.meta.env.BASE_URL + "/assets/tools/vscode.png".slice(1);
+const Tools2 = import.meta.env.BASE_URL + "/assets/tools/reactjs.png".slice(1);
+const Tools3 = import.meta.env.BASE_URL + "/assets/tools/Laravel.png".slice(1);
+const Tools4 = import.meta.env.BASE_URL + "/assets/tools/tailwind.png".slice(1);
+const Tools5 = import.meta.env.BASE_URL + "/assets/tools/bootstrap.png".slice(1);
+const Tools6 = import.meta.env.BASE_URL + "/assets/tools/js.png".slice(1);
+const Tools7 = import.meta.env.BASE_URL + "/assets/tools/PHP.png".slice(1);
+const Tools8 = import.meta.env.BASE_URL + "/assets/tools/MySQL.png".slice(1);
+const Tools9 = import.meta.env.BASE_URL + "/assets/tools/Laragon.png".slice(1);
+const Tools10 = import.meta.env.BASE_URL + "/assets/tools/github.png".slice(1);
 
 export const listTools = [
   {
@@ -90,7 +90,7 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.webp";
+const Proyek1 = import.meta.env.BASE_URL + "/assets/proyek/proyek1.webp".slice(1);
 
 export const listProyek = [
   {
