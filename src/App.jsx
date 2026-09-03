@@ -20,16 +20,17 @@ function App() {
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
-              href="#"
+              href={import.meta.env.BASE_URL + "cv/HanifFikriSaputraCV.pdf"}
+              download="HanifFikriSaputraCV.pdf"
               className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600"
             >
               Download CV <i className="ri-file-download-line ri-lg"></i>
             </a>
             <a
-              href="#"
+              href="#project"
               className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
             >
-              see Project <i className="ri-arrow-down-double-fill rii-lg"></i>
+              see Project <i className="ri-arrow-down-double-fill ri-lg"></i>
             </a>
           </div>
         </div>
