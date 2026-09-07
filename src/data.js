@@ -10,12 +10,14 @@ const Tools1 = import.meta.env.BASE_URL + "/assets/tools/vscode.png".slice(1);
 const Tools2 = import.meta.env.BASE_URL + "/assets/tools/reactjs.png".slice(1);
 const Tools3 = import.meta.env.BASE_URL + "/assets/tools/Laravel.png".slice(1);
 const Tools4 = import.meta.env.BASE_URL + "/assets/tools/tailwind.png".slice(1);
-const Tools5 = import.meta.env.BASE_URL + "/assets/tools/bootstrap.png".slice(1);
+const Tools5 =
+  import.meta.env.BASE_URL + "/assets/tools/bootstrap.png".slice(1);
 const Tools6 = import.meta.env.BASE_URL + "/assets/tools/js.png".slice(1);
 const Tools7 = import.meta.env.BASE_URL + "/assets/tools/PHP.png".slice(1);
 const Tools8 = import.meta.env.BASE_URL + "/assets/tools/MySQL.png".slice(1);
 const Tools9 = import.meta.env.BASE_URL + "/assets/tools/Laragon.png".slice(1);
 const Tools10 = import.meta.env.BASE_URL + "/assets/tools/github.png".slice(1);
+const Tools11 = import.meta.env.BASE_URL + "/assets/tools/yii.png".slice(1);
 
 export const listTools = [
   {
@@ -88,17 +90,27 @@ export const listTools = [
     ket: "Repository",
     dad: "1000",
   },
+  {
+    id: 11,
+    gambar: Tools11,
+    nama: "Yii2",
+    ket: "framework",
+    dad: "1100",
+  },
 ];
 
-const Proyek1 = import.meta.env.BASE_URL + "/assets/proyek/proyek1.webp".slice(1);
+const noimg = import.meta.env.BASE_URL + "/assets/proyek/default.png".slice(1);
+const Proyek1 =
+  import.meta.env.BASE_URL + "/assets/proyek/proyek1.webp".slice(1);
 
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    gambar: noimg,
+    nama: "Toko Baju",
+    desk: "Web Toko Baju Sederhana",
+    tools: ["HTML", "CSS", "PHP", "YY2"],
+    link: "https://haniffikri.freedev.app/",
     dad: "200",
   },
 ];
