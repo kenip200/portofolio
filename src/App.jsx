@@ -239,7 +239,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Kegiatan
+          Activity
         </h1>
         <div className="kegiatanBox mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listKegiatan.map((kegiatan) => (
@@ -271,7 +271,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Sertifikasi
+          certification
         </h1>
         <div className="sertifikasiBox mt-14 grid md:grid-cols-2 grid-cols-1 gap-4">
           {listSertifikasi.map((sertifikat) => (
@@ -303,7 +303,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Artikel & Blog
+          Articles & Blogs
         </h1>
 
         {listArtikel.length === 0 ? (
