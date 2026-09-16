@@ -114,3 +114,144 @@ export const listProyek = [
     dad: "200",
   },
 ];
+
+export const listPendidikan = [
+  {
+    id: 1,
+    dad: "100",
+    jenjang: "SMK",
+    nama: "SMKN 1 Jenangan Ponorogo",
+    jurusan: "Rekayasa Perangkat Lunak",
+    tahun: "2024 — Now",
+  },
+  {
+    id: 2,
+    dad: "200",
+    jenjang: "SMP",
+    nama: "SMPN 5 Ponorogo",
+    jurusan: "Pendidikan Menengah Pertama",
+    tahun: "2021 — 2024",
+  },
+  {
+    id: 3,
+    dad: "300",
+    jenjang: "SD",
+    nama: "SDN 1 Brotonegaran Ponorogo",
+    jurusan: "Sekolah dasar",
+    tahun: "2015 — 2021",
+  },
+];
+
+export const listSkills = [
+  { id: 1, nama: "Coding", level: 80, dad: "100" },
+  { id: 2, nama: "Web Development", level: 70, dad: "100" },
+  { id: 3, nama: "Android Aplication Development", level: 65, dad: "200" },
+  { id: 4, nama: "Problem Solving", level: 75, dad: "300" },
+];
+
+export const listExperience = [
+  {
+    id: 1,
+    kategori: "Kunjungan Industri",
+    nama: "Kunjungan Industri (KI)",
+    penyelenggara: "PT Gamelab Indonesia",
+    tahun: "2026",
+    desk: "Participating in industrial visits to learn about the application of technology in the workplace.",
+    dad: "100",
+  },
+  {
+    id: 2,
+    kategori: "Bootcamp",
+    nama: "Bootcamp LKS IT Software Solution for Business",
+    penyelenggara: "PT Universal Big Data",
+    tahun: "2026",
+    desk: "Participating in intensive training to prepare for the secondary education-level LKS (Student Competency Competition).",
+    dad: "200",
+  },
+  {
+    id: 3,
+    kategori: "Lomba",
+    nama: "Lomba Kompetensi Siswa (LKS) - IT Software Solution for Business",
+    penyelenggara: "Kemendikdasmen",
+    tahun: "2026",
+    desk: "Participated in a school/regency-level IT competition in the Software Solutions for Business category.",
+    dad: "300",
+  },
+  {
+    id: 4,
+    kategori: "PKL",
+    nama: "Praktik Kerja Lapangan",
+    penyelenggara: "PT Promedia Citra Digital Informatika",
+    tahun: "2026",
+    desk: "Undertake a field internship as a web developer.",
+    dad: "400",
+  },
+];
+
+const kegiatan1 =
+  import.meta.env.BASE_URL + "/assets/kegiatan/gamelab.jpeg".slice(1);
+const kegiatan2 =
+  import.meta.env.BASE_URL + "/assets/kegiatan/ubig.jpeg".slice(1);
+const kegiatan3 =
+  import.meta.env.BASE_URL + "/assets/kegiatan/lks.jpeg".slice(1);
+const kegiatan4 =
+  import.meta.env.BASE_URL + "/assets/kegiatan/pkl.jpeg".slice(1);
+
+export const listKegiatan = [
+  {
+    id: 1,
+    gambar: kegiatan1,
+    nama: "Kunjungan Industri Gamelab Indonesia 2026",
+    dad: "100",
+  },
+  {
+    id: 2,
+    gambar: kegiatan2,
+    nama: "Bootcamp LKS UBIG 2026",
+    dad: "200",
+  },
+  {
+    id: 3,
+    gambar: kegiatan3,
+    nama: "LKS IT SOFTWARE JATIM 2026",
+    dad: "300",
+  },
+  {
+    id: 4,
+    gambar: kegiatan4,
+    nama: "PKL PT Promedia Citra Digital Informatika 2026",
+    dad: "400",
+  },
+];
+
+const sertifikat1 =
+  import.meta.env.BASE_URL + "./assets/certificates/ki.png".slice(1);
+const sertifikat2 =
+  import.meta.env.BASE_URL + "./assets/certificates/lks.png".slice(1);
+
+export const listSertifikasi = [
+  {
+    id: 1,
+    gambar: sertifikat1,
+    nama: "Bootcamp LKS UBIG 2026 certifictates",
+    dad: "100",
+  },
+  {
+    id: 2,
+    gambar: sertifikat2,
+    nama: "LKS IT SOFTWARE JATIM 2026 certifictates",
+    dad: "100",
+  },
+];
+
+export const listArtikel = [
+  // Contoh format kalau nanti sudah ada artikel:
+  // {
+  //   id: 1,
+  //   gambar: "/images/artikel/belajar-react.jpg",
+  //   judul: "Memulai Belajar React untuk Pemula",
+  //   tanggal: "12 Agustus 2026",
+  //   ringkasan: "Panduan singkat langkah-langkah dasar memulai pengembangan aplikasi web menggunakan React dan Vite.",
+  //   link: "https://medium.com/@username/belajar-react-pemula",
+  // },
+];

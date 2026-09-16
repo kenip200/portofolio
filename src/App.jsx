@@ -1,5 +1,14 @@
 import Dataimg from "./data.js";
-import { listTools, listProyek } from "./data.js";
+import {
+  listTools,
+  listProyek,
+  listPendidikan,
+  listSkills,
+  listExperience,
+  listKegiatan,
+  listSertifikasi,
+  listArtikel,
+} from "./data.js";
 
 function App() {
   return (
@@ -59,7 +68,8 @@ function App() {
           />
           <p className="text-base/loose mb-10">
             Hi, my name is Hanif Fikri Saputra, a student of Software
-            Engineering at SMKN 1 Jenangan Ponorogo.
+            Engineering at SMKN 1 Jenangan Ponorogo. I am currently focusing on
+            learning web development.
           </p>
           <div className="flex items-center justify-between">
             <img
@@ -79,6 +89,77 @@ function App() {
           </div>
         </div>
 
+        {/* education */}
+        <div className="education mt-32 py-10" id="pendidikan">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            Education
+          </h1>
+          <div className="pendidikanBox mt-14 grid md:grid-cols-2 grid-cols-1 gap-4">
+            {listPendidikan.map((edu) => (
+              <div
+                key={edu.id}
+                className="p-5 border bg-zinc-800 rounded-md hover:bg-zinc-600"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={edu.dad}
+                data-aos-once="true"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="py-1 px-3 text-sm border border-zinc-500 bg-zinc-700 rounded-md font-semibold">
+                    {edu.jenjang}
+                  </span>
+                  <span className="opacity-50 text-sm">{edu.tahun}</span>
+                </div>
+                <h4 className="text-xl font-bold">{edu.nama}</h4>
+                <p className="text-violet-400 font-semibold mt-1">
+                  {edu.jurusan}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* skills */}
+        <div className="skills mt-32 py-10" id="skill">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            My Skills
+          </h1>
+          <div className="skillsBox mt-14 grid grid-cols-1 gap-4">
+            {listSkills.map((skill) => (
+              <div
+                key={skill.id}
+                className="p-4 border bg-zinc-800 rounded-md hover:bg-zinc-600"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={skill.dad}
+                data-aos-once="true"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-bold">{skill.nama}</h4>
+                  <span className="opacity-50 text-sm">{skill.level}%</span>
+                </div>
+                <div className="w-full h-2 bg-zinc-700 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-violet-500 rounded-full transition-all duration-700"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* tools */}
         <div className="tools mt-32">
           <h1
             className="text-4xl/snug font-bold mb-4"
@@ -112,6 +193,169 @@ function App() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* experience */}
+      <div className="experience mt-32 py-10" id="experience">
+        <h1
+          className="text-center text-4xl font-bold mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Experience
+        </h1>
+        <div className="experienceBox mt-14 grid md:grid-cols-2 grid-cols-1 gap-4">
+          {listExperience.map((exp) => (
+            <div
+              key={exp.id}
+              className="p-5 border bg-zinc-800 rounded-md hover:bg-zinc-600"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={exp.dad}
+              data-aos-once="true"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="py-1 px-3 text-sm border border-zinc-500 bg-zinc-700 rounded-md font-semibold">
+                  {exp.kategori}
+                </span>
+                <span className="opacity-50 text-sm">{exp.tahun}</span>
+              </div>
+              <h4 className="text-xl font-bold">{exp.nama}</h4>
+              <p className="text-violet-400 font-semibold mt-1">
+                {exp.penyelenggara}
+              </p>
+              <p className="text-base/loose mt-3 opacity-80">{exp.desk}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* kegiatan */}
+      <div className="activities mt-32 py-10" id="activity">
+        <h1
+          className="text-4xl/snug font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Kegiatan
+        </h1>
+        <div className="kegiatanBox mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listKegiatan.map((kegiatan) => (
+            <div
+              key={kegiatan.id}
+              className="p-4 border bg-zinc-800 rounded-md"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={kegiatan.dad}
+              data-aos-once="true"
+            >
+              <img
+                src={kegiatan.gambar}
+                alt="kegiatan image"
+                loading="lazy"
+                className="w-full h-auto rounded-md"
+              />
+              <h1 className="text-xl font-bold my-4">{kegiatan.nama}</h1>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* sertifikasi */}
+      <div className="certificates mt-32 py-10" id="certificate">
+        <h1
+          className="text-4xl/snug font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Sertifikasi
+        </h1>
+        <div className="sertifikasiBox mt-14 grid md:grid-cols-2 grid-cols-1 gap-4">
+          {listSertifikasi.map((sertifikat) => (
+            <div
+              key={sertifikat.id}
+              className="p-4 border bg-zinc-800 rounded-md"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={sertifikat.dad}
+              data-aos-once="true"
+            >
+              <img
+                src={sertifikat.gambar}
+                alt="sertifikat image"
+                loading="lazy"
+                className="w-full h-auto rounded-md"
+              />
+              <h1 className="text-xl font-bold my-4">{sertifikat.nama}</h1>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* artikel */}
+      <div className="articles mt-32 py-10" id="article">
+        <h1
+          className="text-4xl/snug font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Artikel & Blog
+        </h1>
+
+        {listArtikel.length === 0 ? (
+          <div
+            className="mt-14 flex flex-col items-center justify-center text-center py-12 border border-dashed border-zinc-700 rounded-md"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <p className="opacity-70 text-sm">
+              Belum ada artikel yang dipublikasikan saat ini.
+            </p>
+            <p className="opacity-50 text-xs mt-1">
+              Nantikan tulisan-tulisan berikutnya di sini.
+            </p>
+          </div>
+        ) : (
+          <div className="artikelBox mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+            {listArtikel.map((artikel) => (
+              <div
+                key={artikel.id}
+                className="p-4 border bg-zinc-800 rounded-md flex flex-col"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={artikel.dad}
+                data-aos-once="true"
+              >
+                <img
+                  src={artikel.gambar}
+                  alt="artikel image"
+                  loading="lazy"
+                  className="w-full h-auto rounded-md"
+                />
+                <span className="opacity-50 text-sm mt-4">
+                  {artikel.tanggal}
+                </span>
+                <h1 className="text-xl font-bold my-2">{artikel.judul}</h1>
+                <p className="text-base/loose opacity-80 mb-4 flex-1">
+                  {artikel.ringkasan}
+                </p>
+                <a
+                  href={artikel.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-violet-400 font-semibold hover:underline mt-auto"
+                >
+                  Baca Selengkapnya →
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* projects */}
@@ -177,7 +421,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Contact
+          Contact Me
         </h1>
         <form
           action="https://formsubmit.co/71d31b6a79f1ad98cfb8a89f9d3209d7"

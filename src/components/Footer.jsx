@@ -5,6 +5,7 @@ export const Footer = () => {
       <div className="flex gap-7">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#project">Project</a>
       </div>
       <div className="flex items-center gap-3">

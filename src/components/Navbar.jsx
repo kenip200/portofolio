@@ -27,27 +27,32 @@ export const Navbar = () => {
       </div>
 
       <ul
-        className={`menu flex items-center sm:gap-10 gap-4 md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40 ${
+        className={`menu flex items-center sm:gap-8 gap-2 md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md px-3 py-3 md:p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40 ${
           active ? "top-0 opacity-100" : "top-10 opacity-0"
         }`}
       >
         <li>
-          <a href="#home" className="sm:text-lg text-base font-medium">
+          <a href="#home" className="sm:text-lg text-sm font-medium">
             Home
           </a>
         </li>
         <li>
-          <a href="#about" className="sm:text-lg text-base font-medium">
+          <a href="#about" className="sm:text-lg text-sm font-medium">
             About
           </a>
         </li>
         <li>
-          <a href="#project" className="sm:text-lg text-base font-medium">
+          <a href="#experience" className="sm:text-lg text-sm font-medium">
+            Experience
+          </a>
+        </li>
+        <li>
+          <a href="#project" className="sm:text-lg text-sm font-medium">
             Project
           </a>
         </li>
         <li>
-          <a href="#contact" className="sm:text-lg text-base font-medium">
+          <a href="#contact" className="sm:text-lg text-sm font-medium">
             Contact
           </a>
         </li>
