@@ -16,7 +16,7 @@ export const Footer = () => {
         >
           <i className="ri-github-fill ri-2x"></i>
         </a>
-        <a href="mailto:sihanif085@gmail.com">
+        <a href="#">
           <i className="ri-mail-fill ri-2x"></i>
         </a>
         <a href="#">
